@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GithubIcon, LinkedInIcon, WebsiteIcon } from "./icons";
+import { GithubIcon, LinkedInIcon, WebsiteIcon } from "../icons";
 
 export const TopBar = () => {
     return <MainWrapper>
