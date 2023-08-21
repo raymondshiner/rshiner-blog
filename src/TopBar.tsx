@@ -14,7 +14,6 @@ const Header = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    cursor: pointer;
 `
 
 const TopBarWrapper = styled.div`
