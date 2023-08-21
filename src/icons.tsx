@@ -11,7 +11,7 @@ export const GithubIcon = () =>
     </a>
 
 export const LinkedInIcon = () =>
-    <a href="https://www.linkedin.com/in/raymondshiner" target="_blank" style={{ height: 32 }}>
+    <a href="https://www.linkedin.com/in/raymond-shiner" target="_blank" style={{ height: 32 }}>
         <img
             src="assets/linked-in.svg"
             alt="LinkedIn Icon"
