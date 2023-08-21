@@ -1,9 +1,15 @@
 import styled from "styled-components";
+import { GithubIcon, LinkedInIcon, WebsiteIcon } from "./icons";
 
 export const TopBar = () => {
-    return <TopBarWrapper>
+    return <MainWrapper>
         <Header>RS Blog</Header>
-    </TopBarWrapper>;
+        <IconWrapper>
+            <GithubIcon />
+            <LinkedInIcon />
+            <WebsiteIcon />
+        </IconWrapper>
+    </MainWrapper>;
 }
 
 const Header = styled.div`
@@ -16,17 +22,25 @@ const Header = styled.div`
     line-height: normal;
 `
 
-const TopBarWrapper = styled.div`
+const MainWrapper = styled.div`
     //component
     position: absolute;
     top: 0px;
     height: 48px;
-    width: 100vw;
+    width: calc(100vw - 40px);
     border-bottom: 1px solid #bfbfbf;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
 
     //content
-    padding: 0 32px;
+    padding-left: 24px;
+    padding-right: 16px;
     display: flex;
     align-items: center;
-`;
+    justify-content: space-between;
+`
+
+const IconWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px
+`
