@@ -13,9 +13,7 @@ export const TopBar = () => {
 }
 
 const Header = styled.div`
-    color: #323232;
     text-shadow: -4px 4px 4px rgba(73, 73, 73, 0.50);
-    font-family: Poppins;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
