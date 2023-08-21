@@ -1,5 +1,7 @@
+import { TopBar } from "./TopBar"
+
 const App = () => {
-    return <div>TEST</div>
+    return <TopBar />
 }
 
 export default App
