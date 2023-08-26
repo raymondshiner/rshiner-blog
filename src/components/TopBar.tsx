@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { GithubIcon, LinkedInIcon, WebsiteIcon } from "../icons";
 
 export const TopBar = () => {
-    return <MainWrapper >
+    return <StyledTopBarWrapper >
         <Header href="/">RS Blog</Header>
         <IconWrapper>
             <WebsiteIcon />
             <GithubIcon />
             <LinkedInIcon />
         </IconWrapper>
-    </MainWrapper>;
+    </StyledTopBarWrapper>;
 }
 
 const Header = styled.a`
@@ -23,14 +23,15 @@ const Header = styled.a`
     cursor: pointer;
 `
 
-const MainWrapper = styled.div`
+const StyledTopBarWrapper = styled.div`
     //component
-    position: absolute;
+    position: fixed;
     top: 0px;
     height: 48px;
     width: calc(100vw - 40px);
     border-bottom: 1px solid #bfbfbf;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.35);
+    background-color: white;
 
     //content
     padding-left: 24px;

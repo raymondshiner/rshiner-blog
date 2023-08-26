@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 type BlogPostProps = {
@@ -7,7 +8,9 @@ type BlogPostProps = {
 }
 
 export const BlogPostCard = ({ imgSrc, title, summary }: BlogPostProps) => {
-    return <Wrapper>
+    const navigate = useNavigate();
+
+    return <Wrapper onClick={() => navigate(`/posts/${title}`)}>
         <BlogPostImage src={imgSrc} />
         <Title>{title}</Title>
         <SecondaryText>
