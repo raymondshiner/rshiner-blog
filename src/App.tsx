@@ -1,9 +1,10 @@
 import { IconContext } from "react-icons";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { styled } from "styled-components";
+import { BlogPostProvider } from "./BlogPostContext";
 import { PageNotFound404 } from "./components/404";
-import { BlogPost } from "./components/BlogPost";
 import { BlogPostList } from "./components/BlogPostList/BlogPostList";
+import { BlogPost } from "./components/BlogPostPage";
 import { TopBar } from "./components/TopBar/TopBar";
 
 const MainContentWrapper = styled.div`
@@ -22,7 +23,9 @@ const MainContentWrapper = styled.div`
 const AppLayout = () => <>
     <TopBar />
     <MainContentWrapper>
-        <Outlet />
+        <BlogPostProvider>
+            <Outlet />
+        </BlogPostProvider>
     </MainContentWrapper >
 </>;
 
