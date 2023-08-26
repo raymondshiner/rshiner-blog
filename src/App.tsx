@@ -40,7 +40,8 @@ const BlogPostList = styled.div`
     box-sizing: border-box;
     gap: 16px;
     display: flex;
-    max-width: 350px;
+    max-width: 366px;
     align-items: center;
+    padding: 0px 8px;
     flex-direction: column;
 `;
