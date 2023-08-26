@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { BlogPostCard } from "./BlogPost";
+import { BlogPostCard } from "./BlogPostCard";
 
 const testImgA = "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
 const testImgB = "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg"
