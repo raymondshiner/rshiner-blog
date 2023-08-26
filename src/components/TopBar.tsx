@@ -5,9 +5,9 @@ export const TopBar = () => {
     return <MainWrapper>
         <Header>RS Blog</Header>
         <IconWrapper>
+            <WebsiteIcon />
             <GithubIcon />
             <LinkedInIcon />
-            <WebsiteIcon />
         </IconWrapper>
     </MainWrapper>;
 }
@@ -40,5 +40,8 @@ const MainWrapper = styled.div`
 const IconWrapper = styled.div`
     display: flex;
     align-items: center;
-    gap: 8px
+    gap: 8px;
 `
+
+
+
