@@ -1,3 +1,5 @@
+import { styled } from "styled-components";
+
 const iconSize = '32';
 
 export const GithubIcon = () =>
@@ -21,11 +23,26 @@ export const LinkedInIcon = () =>
     </a>
 
 export const WebsiteIcon = () =>
-    <a href="https://www.raymondshiner.com/" target="_blank" style={{ height: 32 }}>
-        <img
+    <a href="https://www.raymondshiner.com/" target="_blank" style={{ height: 32, display: 'flex', alignItems: 'center' }}>
+        <StyledWebsiteIcon
             src="assets/global.svg"
             alt="Personal Website Icon"
             width={iconSize}
             height={iconSize}
         />
+        <StyledWebsiteText>My Website</StyledWebsiteText>
     </a>
+
+const StyledWebsiteIcon = styled.img`
+    @media screen and (min-width: 600px) {
+        display: none;
+    }
+`
+
+const StyledWebsiteText = styled.div`
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+    font-size: 14px;
+    color: black;
+`
