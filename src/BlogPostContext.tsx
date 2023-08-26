@@ -18,6 +18,7 @@ export const BlogPostProvider = ({ children }: PropsWithChildren) => {
     </BlogPostContext.Provider>
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useBlogPosts = () => {
     const context = useContext(BlogPostContext);
 
