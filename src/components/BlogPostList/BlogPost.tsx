@@ -6,7 +6,7 @@ type BlogPostProps = {
     summary: string;
 }
 
-export const BlogPost = ({ imgSrc, title, summary }: BlogPostProps) => {
+export const BlogPostCard = ({ imgSrc, title, summary }: BlogPostProps) => {
     return <Wrapper>
         <BlogPostImage src={imgSrc} />
         <Title>{title}</Title>
