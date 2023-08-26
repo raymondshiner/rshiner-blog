@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { GithubIcon, LinkedInIcon, WebsiteIcon } from "../icons";
 
 export const TopBar = () => {
-    return <MainWrapper>
-        <Header>RS Blog</Header>
+    return <MainWrapper >
+        <Header href="/">RS Blog</Header>
         <IconWrapper>
             <WebsiteIcon />
             <GithubIcon />
@@ -12,12 +12,15 @@ export const TopBar = () => {
     </MainWrapper>;
 }
 
-const Header = styled.div`
+const Header = styled.a`
     text-shadow: -4px 4px 4px rgba(73, 73, 73, 0.50);
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 `
 
 const MainWrapper = styled.div`
