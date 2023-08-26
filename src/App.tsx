@@ -1,3 +1,4 @@
+import { IconContext } from "react-icons";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { styled } from "styled-components";
 import { PageNotFound404 } from "./components/404";
@@ -42,4 +43,8 @@ const router = createBrowserRouter([
     },
 ])
 
-export default function App() { return <RouterProvider router={router} /> }
+export default function App() {
+    return <IconContext.Provider value={{ color: 'black', size: '32px' }}>
+        <RouterProvider router={router} />
+    </IconContext.Provider>
+}

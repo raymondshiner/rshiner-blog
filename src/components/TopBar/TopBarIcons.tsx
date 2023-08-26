@@ -1,39 +1,39 @@
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { CgWebsite } from "react-icons/cg";
 import { styled } from "styled-components";
 
-const iconSize = '32';
-
 export const GithubIcon = () =>
-    <a href="https://www.github.com/raymondshiner" target="_blank" style={{ height: 32 }}>
-        <img
-            src="assets/github.svg"
+    <StyledIconAnchor href="https://www.github.com/raymondshiner" >
+        <AiFillGithub
             alt="Github Icon"
-            width={iconSize}
-            height={iconSize}
         />
-    </a>
+    </StyledIconAnchor>
 
 export const LinkedInIcon = () =>
-    <a href="https://www.linkedin.com/in/raymond-shiner" target="_blank" style={{ height: 32 }}>
-        <img
-            src="assets/linked-in.svg"
+    <StyledIconAnchor href="https://www.linkedin.com/in/raymond-shiner">
+        <AiFillLinkedin
             alt="LinkedIn Icon"
-            width={iconSize}
-            height={iconSize}
         />
-    </a>
+    </StyledIconAnchor>
 
 export const WebsiteIcon = () =>
-    <a href="https://www.raymondshiner.com/" target="_blank" style={{ height: 32, display: 'flex', alignItems: 'center' }}>
+    <StyledIconAnchor href="https://www.raymondshiner.com/">
         <StyledWebsiteIcon
-            src="assets/global.svg"
             alt="Personal Website Icon"
-            width={iconSize}
-            height={iconSize}
         />
         <StyledWebsiteText>My Website</StyledWebsiteText>
-    </a>
+    </StyledIconAnchor>
 
-const StyledWebsiteIcon = styled.img`
+const StyledIconAnchor = styled.a`
+    height: 32px;
+    display: flex;
+    align-items: center;
+`
+StyledIconAnchor.defaultProps = {
+    target: '_blank'
+}
+
+const StyledWebsiteIcon = styled(CgWebsite)`
     @media screen and (min-width: 600px) {
         display: none;
     }
