@@ -1,6 +1,7 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { styled } from "styled-components";
 import { PageNotFound404 } from "./components/404";
+import { BlogPost } from "./components/BlogPost";
 import { BlogPostList } from "./components/BlogPostList/BlogPostList";
 import { TopBar } from "./components/TopBar/TopBar";
 
@@ -25,12 +26,17 @@ const AppLayout = () => <>
 
 const router = createBrowserRouter([
     {
+        path: '/',
         element: <AppLayout />,
         errorElement: <PageNotFound404 />,
         children: [
             {
                 path: '/',
-                element: <BlogPostList />
+                element: <BlogPostList />,
+            },
+            {
+                path: '/posts/:title',
+                element: <BlogPost />
             }
         ]
     },
