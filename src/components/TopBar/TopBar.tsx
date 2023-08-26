@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { GithubIcon, LinkedInIcon, WebsiteIcon } from "./TopBarIcons";
 
 export const TopBar = () => {
-    return <StyledTopBarWrapper >
-        <Header href="/">RS Blog</Header>
+    const navigate = useNavigate();
+
+    return <StyledTopBarWrapper>
+        <Header onClick={() => navigate('/')}>RS Blog</Header>
         <IconWrapper>
             <WebsiteIcon />
             <GithubIcon />
@@ -12,14 +15,12 @@ export const TopBar = () => {
     </StyledTopBarWrapper>;
 }
 
-const Header = styled.a`
+const Header = styled.div`
     text-shadow: -4px 4px 4px rgba(73, 73, 73, 0.50);
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    color: black;
-    text-decoration: none;
     cursor: pointer;
 `
 
