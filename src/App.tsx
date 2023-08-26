@@ -1,8 +1,8 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { styled } from "styled-components";
-import { PageNotFound404 } from "./404";
+import { PageNotFound404 } from "./components/404";
 import { BlogPostList } from "./components/BlogPostList/BlogPostList";
-import { TopBar } from "./components/TopBar";
+import { TopBar } from "./components/TopBar/TopBar";
 
 const AppLayout = () => <>
     <TopBar />
