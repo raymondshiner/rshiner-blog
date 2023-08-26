@@ -42,6 +42,6 @@ const BlogPostList = styled.div`
     display: flex;
     max-width: 366px;
     align-items: center;
-    padding: 0px 8px;
+    padding: 0px 8px 16px;
     flex-direction: column;
 `;
