@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import { BlogPostProvider } from "./BlogPostContext";
 import { PageNotFound404 } from "./components/404";
 import { BlogPostList } from "./components/BlogPostList/BlogPostList";
-import { BlogPost } from "./components/BlogPostPage";
+import { BlogPostPage } from "./components/BlogPostPage";
 import { TopBar } from "./components/TopBar/TopBar";
 
 
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/posts/:title',
-                element: <BlogPost />
+                element: <BlogPostPage />
             }
         ]
     },
