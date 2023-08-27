@@ -61,11 +61,11 @@ const Wrapper = styled.div`
     border-radius: 7px;
     padding: 8px;
     transition: ease-in-out 0.4s;
+    max-width: 350px;
 `;
 
 const BlogPostImage = styled.img`
     width: 100%;
-    max-width: 350px;
     height: 210px;
     border-radius: 7px;
 `
