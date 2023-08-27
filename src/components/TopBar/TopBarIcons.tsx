@@ -3,7 +3,7 @@ import { CgWebsite } from "react-icons/cg";
 import { styled } from "styled-components";
 
 export const GithubIcon = () =>
-    <StyledIconAnchor href="https://www.github.com/raymondshiner" >
+    <StyledIconAnchor href="https://www.github.com/raymondshiner/rshiner-blog" >
         <AiFillGithub
             alt="Github Icon"
         />
