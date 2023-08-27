@@ -1,3 +1,4 @@
+import { IconContext } from "react-icons";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { GithubIcon, LinkedInIcon, WebsiteIcon } from "./TopBarIcons";
@@ -8,9 +9,11 @@ export const TopBar = () => {
     return <StyledTopBarWrapper>
         <Header onClick={() => navigate('/')}>RS Blog</Header>
         <IconWrapper>
-            <WebsiteIcon />
-            <GithubIcon />
-            <LinkedInIcon />
+            <IconContext.Provider value={{ color: 'black', size: '32px' }}>
+                <WebsiteIcon />
+                <GithubIcon />
+                <LinkedInIcon />
+            </IconContext.Provider>
         </IconWrapper>
     </StyledTopBarWrapper>;
 }

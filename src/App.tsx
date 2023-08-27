@@ -1,4 +1,3 @@
-import { IconContext } from "react-icons";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { styled } from "styled-components";
 import { BlogPostProvider } from "./BlogPostContext";
@@ -6,6 +5,7 @@ import { PageNotFound404 } from "./components/404";
 import { BlogPostList } from "./components/BlogPostList/BlogPostList";
 import { BlogPost } from "./components/BlogPostPage";
 import { TopBar } from "./components/TopBar/TopBar";
+
 
 const MainContentWrapper = styled.div`
     //component
@@ -20,14 +20,16 @@ const MainContentWrapper = styled.div`
     padding: 16px;
 `;
 
-const AppLayout = () => <>
-    <TopBar />
-    <MainContentWrapper>
-        <BlogPostProvider>
-            <Outlet />
-        </BlogPostProvider>
-    </MainContentWrapper >
-</>;
+const AppLayout = () => {
+    return <>
+        <TopBar />
+        <MainContentWrapper>
+            <BlogPostProvider>
+                <Outlet />
+            </BlogPostProvider>
+        </MainContentWrapper >
+    </>;
+}
 
 const router = createBrowserRouter([
     {
@@ -48,7 +50,5 @@ const router = createBrowserRouter([
 ])
 
 export default function App() {
-    return <IconContext.Provider value={{ color: 'black', size: '32px' }}>
-        <RouterProvider router={router} />
-    </IconContext.Provider>
+    return <RouterProvider router={router} />
 }
